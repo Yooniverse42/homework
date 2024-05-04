@@ -1,0 +1,102 @@
+:root {
+  --color-gray: #dbdbdb;
+  --color-green: #4CFE88;
+}
+
+/* ------------------- */
+/* float을 이용한 레이아웃 */
+/* ------------------- */
+
+.women {
+  margin: 20px 0;
+  display: flow-root;
+  position: relative;
+}
+
+.men {
+  margin: 20px 0;
+  display: flow-root;
+  position: relative;
+  clear: both;
+}
+
+img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+img:nth-child(n+2) {
+  margin-left: 20px;
+}
+
+.women::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--color-gray);
+  position: absolute;
+  top: 47px;
+  left: 47px;
+  box-shadow: 84px 0 var(--color-green), 168px 0 var(--color-gray), 252px 0 var(--color-green);
+}
+
+.women::before {
+  content: "";
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 46px;
+  left: 46px;
+  box-shadow: 84px 0 white, 168px 0 white, 252px 0 white;
+}
+
+.men::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--color-green);
+  position: absolute;
+  top: 47px;
+  left: 47px;
+  box-shadow: 84px 0 var(--color-green), 168px 0 var(--color-gray), 252px 0 var(--color-gray);
+}
+
+.men::before {
+  content: "";
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 46px;
+  left: 46px;
+  box-shadow: 84px 0 white, 168px 0 white, 252px 0 white;
+}
+
+
+/* ------------------- */
+/* flex를 이용한 레이아웃 */
+/* ------------------- */
+
+@supports (display: flex) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    font-size: 0;
+   }
+   
+   .women {
+     margin: 10px 0;
+     order: 2;
+   }
+   
+   .men {
+     margin: 10px 0;
+   }
+}
+
