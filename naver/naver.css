@@ -1,1 +1,207 @@
-/* CSS를 활용하여 레이아웃 및 스타일링을 완성해주세요 */
+:root {
+  --device-size: 768px;
+  --font-size-14px: 0.875rem;
+  --font-size-16px: 1rem;
+  --gap-size-5px: 0.3125rem;
+  --gap-size-10px: 0.625rem;
+  --gap-size-20px: 1.25rem;
+  --color-black: #181818;
+  --color-white: #fff;
+  --color-gray-light: #dadada;
+  --color-green-light: #03cf5d;
+  --color-blue-light: #e9f0fd;
+  --color-blue-dark: #24388d;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip-path: polygon(0 0 , 0 0, 0 0);
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+  border-width: 0;
+  font-size: 0;
+}
+
+body {
+  margin: 0 20px;
+}
+
+/* 헤더 */
+header {
+
+  h1 {
+    margin: 100px 0;
+  }
+
+  picture {
+    width: 230px;
+    height: 44px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+/* 메인 */
+main {
+
+  fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+}
+
+.form-login-group {
+
+  .form-user {
+    margin-bottom: var(--gap-size-10px);
+
+
+    input {
+      font-size: var(--font-size-14px);
+      width: 100%;
+      height: 45px;
+      border: 1px solid var(--color-gray-light);
+      background-color: var(--color-white);
+      padding: 0 var(--gap-size-20px);
+
+      &:focus {
+        outline: 1px solid var(--color-green-light);
+        background-color: var(--color-blue-light);
+      }
+    }
+
+    &:nth-child(2) {
+      margin: 0;
+    }
+  }
+  
+  button {
+    font-size: var(--font-size-16px);
+    width: 100%;
+    height: 45px;
+    border: 0;
+    padding: 0;
+    color: var(--color-white);
+    background-color: var(--color-green-light);
+    margin-top: var(--gap-size-20px);
+  }
+}
+
+/* 옵션 */
+.login-option {
+  margin-top: var(--gap-size-10px);
+  position: relative;
+}
+
+.form-checkbox {
+  --size: 25px;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  input {
+    position: absolute;
+    appearance: none;
+    margin: 0;
+    width: 24px;
+    height: 24px;
+
+    &:checked + label {
+      background: url("./icons/checked.svg") no-repeat 0 0 /24px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 1px solid var(--color-blue-dark);
+    }
+  }
+
+  label {
+    background: url("./icons/unchecked.svg") no-repeat 0 0 /24px;
+    padding-left: calc(24px + var(--gap-size-5px ));
+    height: 24px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.ip-security {
+  display: none;
+}
+
+
+/* ------- 데스크탑 ------- */
+@media (min-width: 768px) {
+  body {
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  .form-checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .ip-security {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+
+
+    input {
+      display: none;
+
+    }
+
+    label {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: inline-block;
+    }
+
+    label::after {
+      content: "OFF";
+      display: inline-block;
+      position: relative;
+      top: 0;
+      left: 0;
+      color: gray;
+    }
+
+    input:checked + label::after {
+      content: "ON";
+      color: var(--color-green-light);
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    input:focus-visible {
+      outline: 1px solid var(--color-blue-dark);
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--color-black);
+      margin-right: 30px;
+    }
+  }
+}
