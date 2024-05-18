@@ -1,0 +1,207 @@
+@import url(./reset.css);
+@import url(./base.css);
+@import url(./theme.css);
+
+
+/* ----------------카드 컴포넌트---------------- */
+.card {
+  container-type: inline-size;
+  width: 100%;
+  height: var(--size);
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  z-index: -2;
+
+  .card-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    z-index: -1;
+  }
+
+}
+
+.card-info {
+  margin: var(--large-spacing) auto 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: var(--small-spacing);
+
+  @container (min-width: 1024px) {
+    margin-top: var(--extra-large-spacing);
+  }
+}
+.card-bg-black {
+  color: var(--white);
+}
+.card-bg-white {
+  color: var(--black);
+}
+
+h2 {
+  font-size: var(--large-text);
+
+  @container (min-width: 1024px) {
+    font-size: var(--extra-large-text);
+  }
+}
+
+.sub-title {
+  font-size: var(--base-text);
+  padding-bottom: var(--x-small-spacing);
+  line-height: var(--line-normal);
+  text-align: center;
+
+  @container (min-width: 1024px) {
+    font-size: var(--medium-text);
+  }
+}
+
+.release-date {
+  font-size: var(--small-text);
+  color: var(--gray);
+}
+
+ul {
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: var(--xx-small-text);
+  gap: var(--base-spacing);
+
+  @container (min-width: 1024px) {
+    font-size: var(--x-small-text);
+  }
+
+  li {
+    padding: var(--x-small-spacing) var(--small-spacing);
+    border-radius: 20px;
+    color: var(--white);
+    /* 레디우스 20px 해도 되는지 모르겠어 */
+    /* 포커스 됐을 때 왜 어떻게 해야하나.. */
+  }
+
+  .button-blue {
+    border: 1px solid var(--blue-400);
+    background-color: var(--blue-400);
+
+    &:focus, &:hover {
+      background-color: var(--blue-300);
+    }
+  }
+  .blue-line {
+    background-color: transparent;
+    color: var(--blue-400);
+
+    &:focus, &:hover {
+      background-color: var(--blue-400);
+      color: var(--white);
+    }
+  }
+  .button-black {
+    border: 1px solid var(--black);
+    background-color: var(--black);
+
+    &:focus, &:hover {
+      background-color: var(--gray);
+    }
+  }
+  .black-line {
+    background-color: transparent;
+    color: var(--black);
+
+    &:focus, &:hover {
+      background-color: var(--black);
+      color: var(--white);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* ----------------카드 레이아웃---------------- */
+.card-layout {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  gap: var(--small-spacing);
+
+
+  
+}
+.ipad-pro {
+  background-image: url(../products/ipad_pro.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ipad-air .card {
+  background-image: url(../products/ipad_air.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.iphone-15-pro {
+  background-image: url(../products/iphone15_pro.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @container (min-width: 1024px) {
+    background-image: url(../products/iphone15_pro_wide.jpeg);
+  }
+}
+
+.iphone-15 {
+  background-image: url(../products/iphone15.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.watch {
+  background-image: url(../products/apple_watch.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.macbook-air {
+  background-image: url(../products/macbook_air.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.airpods-pro {
+  background-image: url(../products/airpods_pro.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+
+/* ----------------미디어 쿼리---------------- */
+
+@media (min-width: 1024px) {
+  .card-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .lg-cols-2 {
+    grid-column: span 2;
+  }
+
+  br {
+    display: none;
+  }
+} 

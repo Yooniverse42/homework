@@ -3,3 +3,5 @@
 - [avatars.md](https://github.com/Yooniverse42/homework/blob/main/avatars/avatars.md)
 
 - [naver.md](https://github.com/Yooniverse42/homework/blob/main/naver/naver.md)
+
+- [apple.md](https://github.com/Yooniverse42/homework/blob/main/apple/apple.md)
