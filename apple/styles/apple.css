@@ -123,13 +123,6 @@ ul {
 
 
 
-
-
-
-
-
-
-
 /* ----------------카드 레이아웃---------------- */
 .card-layout {
   display: grid;
@@ -140,48 +133,72 @@ ul {
 
   
 }
-.ipad-pro {
-  background-image: url(../products/ipad_pro.jpeg);
+.ipad-pro .card {
+  background-image: image-set(
+    url(../products/ipad_pro.jpeg) 1x,
+    url(../products/ipad_pro_2x.jpeg) 2x
+  );
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .ipad-air .card {
-  background-image: url(../products/ipad_air.jpeg);
+  background-image: image-set(
+    url(../products/ipad_air.jpeg) 1x,
+    url(../products/ipad_air_2x.jpeg) 2x
+  );
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.iphone-15-pro {
-  background-image: url(../products/iphone15_pro.jpeg);
+.iphone-15-pro .card {
+  background-image: image-set(
+    url(../products/iphone15_pro.jpeg) 1x,
+    url(../products/iphone15_pro_2x.jpeg) 2x
+  );
   background-repeat: no-repeat;
   background-size: cover;
 
   @container (min-width: 1024px) {
-    background-image: url(../products/iphone15_pro_wide.jpeg);
+    background-image: image-set(
+      url(../products/iphone15_pro_wide.jpeg) 1x,
+      url(../products//iphone15_pro_wide_2x.jpeg) 2x
+    );
   }
 }
 
-.iphone-15 {
-  background-image: url(../products/iphone15.jpeg);
+.iphone-15 .card {
+  background-image: image-set(
+    url(../products/iphone15.jpeg) 1x,
+    url(../products/iphone15_2x.jpeg) 2x
+  );
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.watch {
-  background-image: url(../products/apple_watch.jpeg);
+.watch .card {
+  background-image: image-set(
+    url(../products/apple_watch.jpeg) 1x,
+    url(../products/apple_watch_2x.jpeg) 2x
+  );
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .macbook-air {
-  background-image: url(../products/macbook_air.jpeg);
+  background-image: image-set(
+    url(../products/macbook_air.jpeg) 1x,
+    url(../products/macbook_air_2x.jpeg) 2x
+  );
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .airpods-pro {
-  background-image: url(../products/airpods_pro.jpeg);
+  background-image: image-set(
+    url(../products/airpods_pro.jpeg) 1x,
+    url(../products/airpods_pro_2x.jpeg) 2x
+  );
   background-repeat: no-repeat;
   background-size: cover;
 }
