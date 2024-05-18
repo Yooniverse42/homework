@@ -19,3 +19,7 @@
 카드 레이아웃 뿐만 아니라 컴포넌트도 Grid를 이용하려 했지만, 아래 이미지처럼 나왔습니다.. 그래서 여백 계산이 어려울 것 같아, 이번에는 flex-box로 진행했습니다.
 <img src="https://github.com/Yooniverse42/homework/blob/main/apple/md-images/apple-plan2.png?raw=true" width="500">
 
+
+죄송합니다.. 개인사정으로 늦게 시작하게 되어서 완벽하게 마무리 하지 못했습니다😭
+현재 브라우저 크기에 따라 배경 이미지가 완벽하게 원하는 이미지로 나오지 않았습니다..
+그리고 포커스 됐을 때 outline도 못했습니다 ㅠ 감사합니다...
